@@ -40,6 +40,7 @@ class DevConfig(Config):
         Config: The parent configuration class with general configuration settings
     '''
     # SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL')
+      SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
     DEBUG = True
 
 class TestConfig(Config):

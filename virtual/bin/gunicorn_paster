@@ -1,4 +1,4 @@
-#!/home/amir/Desktop/pitch/virtual/bin/python
+#!/home/amir/Desktop/pitch/virtual/bin/python3.6
 # -*- coding: utf-8 -*-
 import re
 import sys

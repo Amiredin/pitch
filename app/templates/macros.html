@@ -1,6 +1,6 @@
 {% macro displayPitches(my_pitches) %} 
 {% for pitch in my_pitches %}
-<div class="col-md-12 pitches">
+<div class="col-md-12 pitches" style="border: 0.1px solid rgb(4, 4, 36);margin: 3%;padding: 5%;font-family: Josefin Sans;font-size: 125%;">
     {% if pitch.user.profile_pic_path %}
     <p>
         <img src="{{url_for('static',filename = pitch.user.profile_pic_path)}}" alt="" class="img-thumbnail">
@@ -72,5 +72,6 @@
         </li>
     </ul>
 </div>
+
 {% endfor %} 
 {% endmacro %}0

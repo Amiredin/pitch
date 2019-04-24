@@ -5,7 +5,7 @@ class Config:
     MAIL_USE_TLS = True
     MAIL_USERNAME = os.environ.get("MAIL_USERNAME")
     MAIL_PASSWORD = os.environ.get("MAIL_PASSWORD")
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://amir:4567@localhost/pitch'
+    # SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://amir:4567@localhost/pitch'
 
     SECRET_KEY="amir"
     # DATABASE_PASS = os.environ.get('DATABASE_PASS')
@@ -17,10 +17,7 @@ class Config:
     #Simple MDE configurations
     SIMPLEMDE_JS_IIFE = True
     SIMPLEMDE_USE_CDN = True
-    
-    @staticmethod
-    def init_app(app):
-        pass
+
 
 class ProdConfig(Config):
     '''
@@ -38,6 +35,7 @@ class DevConfig(Config):
     Args:
         Config: The parent configuration class with general configuration settings
     '''
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://amir:4567@localhost/pitch'
     DEBUG = True
 
 class TestConfig(Config):
@@ -47,7 +45,7 @@ class TestConfig(Config):
     Args:
         Config: The parent configuration class with general configuration settings
     '''
-    DATABASE_PASS = os.environ.get('DATABASE_PASS')
+   
     SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://amir:4567@localhost/pitch'
 
 

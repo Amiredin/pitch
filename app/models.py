@@ -142,4 +142,5 @@ class PhotoProfile(db.Model):
 
     id = db.Column(db.Integer,primary_key = True)
     pic_path = db.Column(db.String())
+    pic_id=db.Column(db.String(250))
     user_id = db.Column(db.Integer,db.ForeignKey("users.id"))

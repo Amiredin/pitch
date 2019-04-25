@@ -5,7 +5,7 @@ class Config:
     MAIL_USE_TLS = True
     MAIL_USERNAME = os.environ.get("MAIL_USERNAME")
     MAIL_PASSWORD = os.environ.get("MAIL_PASSWORD")
-    # SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://amir:4567@localhost/pitch'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://amir:4567@localhost/pitch'
 
     SECRET_KEY="amir"
     # DATABASE_PASS = os.environ.get('DATABASE_PASS')
@@ -46,8 +46,8 @@ class TestConfig(Config):
     Args:
         Config: The parent configuration class with general configuration settings
     '''
-   
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://amir:4567@localhost/pitch'
+    pass
+    # SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://amir:4567@localhost/pitch'
 
 
 #  email configurations
